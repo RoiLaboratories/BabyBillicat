@@ -1,7 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import cn from "../utils/cn";
 import type { ButtonHTMLAttributes } from "react";
-// import { NavLink } from "react-router-dom";
 
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
@@ -15,32 +14,28 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-white text-[#aa6613] border-white border-[1.5px]",
-        // "border hover:opacity-35 focus:ring ring-offset-1 focus:ring-[#6f01d0] border-purple-500 bg-[#6f01d0] text-white",
+        primary:
+          "bg-white text-[#aa6613] border-white border-3 focus:ring ring-offset-1 focus:ring-white",
         primary_outline:
-          "hover:bg-green-600 focus:ring ring-offset-1 focus:ring-green-600 hover:text-white border-green-600 border-[1.5px] text-green-600",
+          "hover:bg-white focus:ring ring-offset-1 focus:ring-white hover:text-[#aa6613] border-white border-3 text-white",
         secondary:
-          "bg-black text-white border-black focus:ring ring-offset-1 focus:ring-black hover:opacity-70 border border-[1.5px]",
-        // "bg-[#ddd6fb] text-[#6f01d0] font-semibold border-purple-300 focus:ring ring-offset-1 focus:ring-[#6f01d0] hover:bg-[#6f01d0] hover:text-white",
+          "bg-[#f88904] text-white border-[#f88904] focus:ring ring-offset-1 focus:ring-[#f88904] hover:opacity-70 border border-3",
         secondary_outline:
-          "hover:bg-black focus:ring ring-offset-1 focus:ring-black hover:text-white border-black border-[1.5px] text-black",
-        danger:
-          "hover:bg-red-700 bg-red-500 text-white hover:border-red-700 border-red-500 border-[1.5px] focus:ring ring-offset-1 focus:ring-red-700",
-        danger_outline:
-          "hover:bg-red-400 focus:ring ring-offset-1 focus:ring-red-500 bg-red-50 hover:text-white border-red-500 border text-red-500",
-        //   outline: "",
+          "hover:bg-black focus:ring ring-offset-1 focus:ring-black hover:text-white border-black border-3 text-black",
+        neutral_outline:
+          "hover:bg-[#f88904] focus:ring ring-offset-1 focus:ring-black border-black border-3 hover:border-[#f88904] text-black hover:text-white",
       },
       size: {
         xs: "text-[11px] px-2.5 py-1",
         sm: "text-sm px-3 py-1.5",
-        md: "text-base px-3 py-2",
+        md: "text-base px-4 py-2",
         //py-1
         lg: "text-lg px-4 py-2",
       },
     },
     defaultVariants: {
       variant: "primary",
-      size: "sm",
+      size: "xs",
     },
   }
 );
@@ -55,7 +50,12 @@ const Button = ({
 }: ButtonProps) => {
   if (to)
     return (
-      <a href={to} className={cn(buttonVariants({ variant, size, className }))}>
+      <a
+        target="_blank"
+        referrerPolicy="no-referrer"
+        href={to}
+        className={cn(buttonVariants({ variant, size, className }))}
+      >
         {children}
       </a>
     );

@@ -1,18 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
 @import "tailwindcss";
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Irish Grover", system-ui;
   color: #fff;
 }
 
-@theme static {
+@theme {
   --color-primary: "#f88904";
   --color-primary-100: "#aa6613";
   --color-primary-200: "#aa7153";
@@ -23,5 +17,9 @@ body {
 @layer components {
   .flex-center {
     @apply justify-center items-center flex;
+  }
+
+  .map-card {
+    box-shadow: 0px 8px 2px 5px #a73913;
   }
 }
