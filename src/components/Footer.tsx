@@ -1,7 +1,11 @@
 function Footer() {
   return (
     <footer className="p-14 bg-[#a73913] flex-center text-lg gap-2">
-      <img src="/copyright.png" className="object-contain size-7" />
+      <img
+        src="/copyright.png"
+        className="object-contain size-7"
+        alt="copyright"
+      />
       Baby Billicat 2025{" "}
     </footer>
   );

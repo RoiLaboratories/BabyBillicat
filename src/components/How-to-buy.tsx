@@ -44,7 +44,8 @@ function HowToBuy() {
           },
         }}
         transition={{ delay: 0.4 }}
-        src="/logo.webp"
+        src="/logo.png"
+        alt="billicat_logo"
         className="w-28 h-32 object-contain absolute -top-12 -left-12"
       />
 

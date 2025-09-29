@@ -46,9 +46,9 @@ function Community() {
             },
           }}
           transition={{ delay: 0.5 }}
-          src="/bbcat.webp"
+          src="/bbcat.png"
           alt="billicat-logo"
-          className="w-40 md:w-72 lg:w-80 relative z-30 "
+          className="w-40 md:w-72 lg:w-80 relative z-30 transform hover:scale-105 transition duration-300 ease-in-out"
         />
         {/* transform hover:scale-105 transition duration-300 ease-in-out */}
         <motion.img
@@ -65,9 +65,9 @@ function Community() {
             },
           }}
           transition={{ delay: 0.7 }}
-          src="/bbcat.webp"
+          src="/bbcat.png"
           alt="billicat-logo"
-          className="w-72 lg:w-80 -ml-16 relative z-20 hidden md:block"
+          className="w-72 lg:w-80 -ml-16 relative z-20 hidden md:block transform hover:scale-105 transition duration-300 ease-in-out"
         />
         <motion.img
           animate={mainControls}
@@ -83,9 +83,9 @@ function Community() {
             },
           }}
           transition={{ delay: 0.9 }}
-          src="/bbcat.webp"
+          src="/bbcat.png"
           alt="billicat-logo"
-          className="w-72 lg:w-80 -ml-16 relative z-30 hidden md:block"
+          className="w-72 lg:w-80 -ml-16 relative z-30 hidden md:block transform hover:scale-105 transition duration-300 ease-in-out"
         />
       </div>
 
@@ -143,8 +143,13 @@ function Community() {
               size="md"
               className="text-2xl rounded-xl px-6 gap-3"
               variant={"neutral_outline"}
+              to="https://t.me/babybillicat"
             >
-              <img src="/telegram.webp" className="object-contain size-6" />
+              <img
+                src="/telegram.png"
+                className="object-contain size-6"
+                alt="telegram_logo"
+              />
               Join Telegram
             </Button>
           </motion.div>
@@ -167,8 +172,13 @@ function Community() {
               size="md"
               className="text-2xl rounded-xl px-6  gap-3"
               variant={"neutral_outline"}
+              to="https://x.com/BBillicat"
             >
-              <img src="/twitter.webp" className="object-contain size-6" />
+              <img
+                src="/twitter.png"
+                className="object-contain size-6"
+                alt="x_logo"
+              />
               Follow on X
             </Button>
           </motion.div>

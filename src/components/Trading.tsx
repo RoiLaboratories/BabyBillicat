@@ -59,7 +59,8 @@ function Trading() {
           },
         }}
         transition={{ delay: 0.4 }}
-        src="/logo.webp"
+        src="/logo.png"
+        alt="billicat_logo"
         className="w-28 h-32 object-contain absolute -top-12 -left-12"
       />
 
@@ -107,15 +108,20 @@ function Trading() {
           className="text-xl rounded-xl md:hidden"
           variant={"secondary"}
         >
-          <img src="/pcs.webp" className="object-contain size-10" />
+          <img
+            src="/pcs.png"
+            className="object-contain size-10"
+            alt="pancakeswap_logo"
+          />
           Buy BBCAT
         </Button>
         <Button
           size="lg"
           className="text-2xl rounded-xl hidden md:flex"
           variant={"secondary"}
+          to=" https://pancakeswap.finance/swap?outputCurrency=0x32Eb603F30ba75052f608CFcbAC45e39B5eF9beC"
         >
-          <img src="/pcs.webp" className="object-contain size-10" />
+          <img src="/pcs.png" className="object-contain size-10" />
           Buy BBCAT
         </Button>
       </motion.div>

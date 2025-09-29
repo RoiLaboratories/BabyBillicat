@@ -13,12 +13,12 @@ const container = {
 
 function Header() {
   return (
-    <header className="relative overflow-hidden">
+    <header className="overflow-hidden top-0 left-0 right-0 sticky z-50">
       <div className="bg-black/35 absolute inset-0 z-10" />
       <div
         className="absolute inset-0 bg-no-repeat bg-[100%_20%] bg-cover transform -scale-x-100"
         style={{
-          backgroundImage: "url(/header-bg.webp)",
+          backgroundImage: "url(/header-bg.png)",
         }}
       />
 
@@ -35,7 +35,7 @@ function Header() {
           className="flex items-center"
         >
           <img
-            src="/logo.webp"
+            src="/logo.png"
             className="w-10 h-12 md:w-28 md:h-32 object-contain"
           />
           <p className="text-lg md:text-2xl lg:text-3xl">Baby Billicat</p>
@@ -49,13 +49,19 @@ function Header() {
           >
             {/*NB: If the button is a link just pass a "to" prop which links to the actual webpage  */}
 
-            <Button size="xs" variant={"primary_outline"} className="md:hidden">
+            <Button
+              size="xs"
+              variant={"primary_outline"}
+              className="md:hidden"
+              to="https://t.me/babybillicat"
+            >
               Join Us
             </Button>
             <Button
               size="md"
               variant={"primary_outline"}
               className="hidden md:block"
+              to="https://t.me/babybillicat"
             >
               Join Us
             </Button>
@@ -65,10 +71,18 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
           >
-            <Button size="xs" className="md:hidden">
+            <Button
+              size="xs"
+              className="md:hidden"
+              to="https://baby-billicat.gitbook.io/baby-billicat/"
+            >
               Whitepaper
             </Button>
-            <Button size="md" className="hidden md:block">
+            <Button
+              size="md"
+              className="hidden md:block"
+              to="https://baby-billicat.gitbook.io/baby-billicat/"
+            >
               Whitepaper
             </Button>
           </motion.div>

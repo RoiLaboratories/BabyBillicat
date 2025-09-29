@@ -119,7 +119,7 @@ function Roadmap() {
             transition={{
               delay: 0.7 + i * 0.15,
             }}
-            className="border-3 rounded-2xl p-8 space-y-3 map-card"
+            className="border-3 rounded-2xl p-8 space-y-3 map-card hover:-translate-y-4 duration-300 ease-in-out"
             key={i}
           >
             <p className="text-xl text-center capitalize">{items.title}</p>
